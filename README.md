@@ -1,6 +1,7 @@
 # Rails-Angular
 Rails-API as backend<br/>
 Angular as Frontend <br/>
+JWT for authentication and authorization <br/>
 <ul>
 <li>Rails Version: 5.2.2</li>
 <li>Ruby Version: 2.5.1</li>
