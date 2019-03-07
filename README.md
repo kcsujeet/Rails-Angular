@@ -13,3 +13,5 @@ How to start the server:<br/><br/>
 <li>Start Angular Server: cd into "angular-todo-app" and "ng s"</li>
 <li>Start Rails Server: cd into "rails-todo-app" "rails s"</li>
 </ul>
+<br/>
+Dont forget to do bundle install
