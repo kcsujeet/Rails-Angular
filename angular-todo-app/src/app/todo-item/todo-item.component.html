@@ -1,0 +1,14 @@
+<li class="item">
+    <div class="columns">
+      <div class="column is-2 has-text-centered is-vcentered">
+        <input type="checkbox"(change)="onToggle(todo)" class="inline-block" />
+      </div>
+      <div [ngClass]="{'is-complete':todo.completed}" class="is-vcentered column is-7">
+        <p>Title: {{ todo.title }}</p>
+        <p>Description: {{ todo.description }}</p>
+      </div>
+      <div class="column has-text-centered is-3 is-vcentered">
+        <a class="delete is-medium" (click)="onDelete(todo)" ></a>
+      </div>
+    </div>
+</li>

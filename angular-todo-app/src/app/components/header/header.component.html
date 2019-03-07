@@ -1,0 +1,47 @@
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="">TODO</a>
+
+    <a
+      role="button"
+      class="navbar-burger burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start"></div>
+
+    <div class="navbar-end">
+      <a
+        class="navbar-item"
+        routerLink=""
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Home
+      </a>
+      <a class="navbar-item" routerLink="/about" routerLinkActive="is-active">
+        About
+      </a>
+      <a *ngIf = "!isAuthenticated" class="navbar-item" routerLink="/login" routerLinkActive="is-active">
+        Login
+      </a>
+      <a *ngIf="!isAuthenticated" class="navbar-item" routerLink="/signup" routerLinkActive="is-active">
+        Signup
+      </a>
+      <a *ngIf="isAuthenticated" class="navbar-item" [routerLink]="['profile',username]">
+        Profile
+      </a>
+      <a class="navbar-item" (click)="logout()">
+        Logout
+      </a>
+    </div>
+  </div>
+</nav>
