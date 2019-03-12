@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: [:show, :update, :destroy]
   before_action :authorize_request
+  before_action :set_todo, only: [:show, :update, :destroy]
 
   # GET /todos
   def index

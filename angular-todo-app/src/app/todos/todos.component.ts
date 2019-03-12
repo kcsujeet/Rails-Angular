@@ -31,4 +31,12 @@ export class TodosComponent implements OnInit {
       this.todos.unshift(todo);
     });
   }
+
+  updateTodo(todo){
+    this.todoService.updateTodo(todo).subscribe(todo =>{
+      const id= todo.id
+      this.todos.find(todo => todo.id=== id).title = todo.title
+      this.todos.find(todo => todo.id=== id).description = todo.description
+    })
+  }
 }

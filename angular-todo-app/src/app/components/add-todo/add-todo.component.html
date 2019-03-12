@@ -1,12 +1,12 @@
-<form class="form" (ngSubmit)="onSubmit()">
+
+<form [formGroup]="todoForm" class="form" (ngSubmit)="onSubmit()">
   <div class="field">
     <p class="control has-icons-left has-icons-right">
       <input
         class="input"
         type="text"
-        name = "title"
+        formControlName = "title"
         placeholder="Title"
-        [(ngModel)]="title"
       />
     </p>
   </div>
@@ -16,9 +16,8 @@
       <input
         class="input"
         type="text"
-        name = "description"
+        formControlName = "description"
         placeholder="Description"
-        [(ngModel)]="description"
       />
       <span class="icon is-small is-left">
         <i class="fas fa-lock"></i>

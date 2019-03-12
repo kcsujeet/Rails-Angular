@@ -2,5 +2,6 @@
 <ul class=" is-hoverable">
   <app-todo-item
   (deleteTodo) = "deleteTodo($event)"
+  (updateTodo) = "updateTodo($event)"
   *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
 </ul>

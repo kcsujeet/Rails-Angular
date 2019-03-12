@@ -11,13 +11,14 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AddTodoComponent } from './components/add-todo/add-todo.component'
 
-import {FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HeaderComponent } from './components/header/header.component'
 
-import {UserService} from './services/user.service'
+import {UserService} from './services/user.service';
+import { ShowErrorsComponent } from './components/global/show-errors/show-errors.component'
 
 @NgModule({
   declarations: [
@@ -30,13 +31,15 @@ import {UserService} from './services/user.service'
     SignupComponent,
     LoginComponent,
     ProfileComponent,
-    HeaderComponent
+    HeaderComponent,
+    ShowErrorsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { UserService } from "../../services/user.service";
-import { Router, ActivatedRoute } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: "app-profile",
-  templateUrl: "./profile.component.html",
-  styleUrls: ["./profile.component.scss"]
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
   authenticated: boolean = false;
@@ -18,19 +18,19 @@ export class ProfileComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.userService.toggleloginStatus()
-    if (localStorage.getItem("user_token") && localStorage.getItem("username"))
+    this.userService.toggleloginStatus();
+    if (localStorage.getItem('user_token') && localStorage.getItem('username'))
       this.authenticated = true;
     else this.authenticated = false;
 
     if (this.authenticated) {
       this.route.params.subscribe(params => {
-        this.paramsUsername = params["username"];
+        this.paramsUsername = params['username'];
         console.log(this.paramsUsername);
       });
       this.userService.getUser(this.paramsUsername).subscribe(user => {
         this.activeUser = user;
       });
-    } else this.router.navigate(["/login"]);
+    } else this.router.navigate(['/login']);
   }
 }

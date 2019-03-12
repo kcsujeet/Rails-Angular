@@ -39,7 +39,7 @@
       <a *ngIf="isAuthenticated" class="navbar-item" [routerLink]="['profile',username]">
         Profile
       </a>
-      <a class="navbar-item" (click)="logout()">
+      <a *ngIf="isAuthenticated" class="navbar-item" (click)="logout()">
         Logout
       </a>
     </div>

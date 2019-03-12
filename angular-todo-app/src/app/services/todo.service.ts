@@ -30,7 +30,12 @@ export class TodoService {
   //toggle completed
   toggleCompleted(todo):Observable<any>{
    const url = `${this.todosUrl}/${todo.id}`
-    return this.http.put(url, todo, httpOptions)
+    return this.http.put(url, todo,{
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: localStorage.getItem("user_token")
+      }
+    })
   }
 
 
@@ -38,7 +43,20 @@ export class TodoService {
   deleteTodo(todo):Observable<any>{
     const url = `${this.todosUrl}/${todo.id}`
 
-    return this.http.delete(url)
+    return this.http.delete(url,{
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: localStorage.getItem("user_token")
+      }
+    })
+  }
+
+  //update
+  updateTodo(todo):Observable<any>{
+   return this.http.patch<any>(`${this.todosUrl}/${todo.id}`,todo,{headers:{
+     "Content-Type": "application/json",
+     "Authorization": localStorage.getItem("user_token")
+   }})
   }
 
   //add

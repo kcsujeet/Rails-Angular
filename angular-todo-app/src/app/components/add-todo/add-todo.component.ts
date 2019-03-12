@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import {TodoService} from '../../services/todo.service'
-
+import { TodoService } from '../../services/todo.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-add-todo',
@@ -8,23 +8,23 @@ import {TodoService} from '../../services/todo.service'
   styleUrls: ['./add-todo.component.scss']
 })
 export class AddTodoComponent implements OnInit {
-  title:string
-  description:string
+  title: string;
+  description: string;
 
-  @Output() addTodo: EventEmitter<any> = new EventEmitter()
-  constructor(private todoService: TodoService) { }
+  @Output() addTodo: EventEmitter<any> = new EventEmitter();
+  
+  todoForm = this.fb.group({
+    title: [''],
+    description: ['']
+  })
+  constructor(private todoService: TodoService, private fb: FormBuilder) {}
 
-  ngOnInit() {
-    
+  ngOnInit() {}
+
+  onSubmit() {
+    const todo = this.todoForm.value;
+    this.addTodo.emit(todo);
+    this.todoForm.reset()
   }
 
-  onSubmit(){
-    const todo = {
-      title:this.title,
-      description:this.description
-    }
-    this.addTodo.emit(todo)
-    this.title = ''
-    this.description = ''
-  }
 }
