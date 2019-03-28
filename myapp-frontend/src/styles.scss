@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+@import '~ngx-toastr/toastr-bs4-alert';
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 85%;
+}
+
+p{
+    font-size: 70%;
+}
+
+.form-control:focus {
+    border-color: #70a3cc;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 174, 233, 0.151);
+}
+
+.navbar{
+    padding: 0 .5rem;
+    background: #5b9bd1;
+}

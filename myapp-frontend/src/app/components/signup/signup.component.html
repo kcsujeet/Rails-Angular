@@ -1,0 +1,47 @@
+<div class="row h-100 align-items-center justify-content-center">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <form [formGroup]="signupForm">
+          <div class="form-group row">
+            <div class="input-group col-sm-12">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                  </div>
+              <input type="email" placeholder="Email" formControlName="email" class="form-control" id="email" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="input-group col-sm-12">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+              <input type="password" placeholder="Password" class="form-control" formControlName="password" />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="input-group col-sm-12">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+              <input type="password" placeholder="Password Confirmation" class="form-control" formControlName="password_confirmation" />
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <button type="submit" class="btn btn-success col-md-3" (click)="signup()">
+              Signup
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
