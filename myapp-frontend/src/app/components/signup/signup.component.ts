@@ -29,7 +29,6 @@ export class SignupComponent implements OnInit {
 
   signup(){
     const user = this.signupForm.value
-    console.log(user)
     this.userService.adduser(user).subscribe(res =>{
       localStorage.setItem('loggedIn', 'true')
       this.userService.toggleisLoggedIn()

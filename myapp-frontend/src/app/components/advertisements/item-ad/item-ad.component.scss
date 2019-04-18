@@ -1,0 +1,24 @@
+.ad-item-owner-image{
+    border-radius: 50%;
+    width: 15%;
+    height: auto;    
+}
+
+.row-border-bottom{
+    border-bottom: 1px solid lightgray;
+}
+
+p{
+    margin-bottom: .5rem;
+}
+
+.item-ad-image{
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.thumbnail-container{
+    height: 5em !important;
+    display: flex;
+    align-items: center;
+}

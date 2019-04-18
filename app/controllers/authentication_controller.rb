@@ -17,7 +17,7 @@ class AuthenticationController < ApplicationController
     if @user&.authenticate(params[:password])
       token = JsonWebToken.encode(user_id: @user.id)
       time = Time.now + 24.hours.to_i
-      cookies.signed[:jwt] = { value: token, httponly: true }
+      cookies.signed[:jwt] = { value: token, httponly: true,expires: 5.day.from_now }
       if cookies.signed[:jwt]
         render json: { token: token, exp: time.strftime("%m-%d-%Y %H:%M") }, status: :ok
       else

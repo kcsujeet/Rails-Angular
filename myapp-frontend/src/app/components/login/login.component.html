@@ -1,26 +1,19 @@
 <div class="row h-100 align-items-center justify-content-center">
   <div class="col-md-4">
+      <ng-flash-message></ng-flash-message>
     <div class="card">
       <div class="card-body">
         <form [formGroup]="loginForm">
           <div class="form-group row">
             <div class="input-group col-sm-12">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="fa fa-envelope"></i>
-                </span>
-              </div>
-              <input type="text" placeholder=" Email" formControlName="email" class="form-control" id="staticEmail" />
+              <i class="fa fa-envelope input-icon text-muted"></i>
+              <input required type="text" placeholder="Email" formControlName="email" class="form-control input-icon-field" id="staticEmail" />
             </div>
           </div>
           <div class="form-group row">
             <div class="input-group col-sm-12">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="fa fa-lock"></i>
-                    </span>
-                  </div>
-              <input type="password" placeholder="Password" class="form-control" formControlName="password" />
+                  <i class="fa fa-lock input-icon text-muted"></i>
+              <input type="password" placeholder="Password" class="form-control input-icon-field" formControlName="password" />
             </div>
           </div>
           <div class="form-group row justify-content-center">

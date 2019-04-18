@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
     end
     #GET /categories/:id
     def show
-        @category_ads = @category.advertisement.all
+        @category_ads = @category.advertisements.all
         render json: @category_ads
     end
 

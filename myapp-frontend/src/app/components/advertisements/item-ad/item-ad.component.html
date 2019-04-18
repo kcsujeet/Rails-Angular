@@ -1,0 +1,39 @@
+<div class="card drop-shadow container-fluid mb-3">
+  <div class="row justify-content-between align-items-center row-border-bottom">
+    <div class="col-md-5 p-2">
+      <img class="ad-item-owner-image" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png"><span class="pl-2"><a>User Name</a></span>
+    </div>
+    <div class="col-md-3 p-2 display-flex align-items-center">
+      <div class="row align-items-center justify-content-end pr-3 h-100">
+        <p class="p-0 m-0">{{advertisement.created_at | date:'yyyy/MM/dd'}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-3 p-3">
+      <div class="thumbnail-container">
+        <img class="item-ad-image" src="https://www.gizmochina.com/wp-content/uploads/2018/03/Vivo-Apex-official-400x400.jpg" alt="">
+      </div>
+    </div>
+    <div class="col-md-6 p-3">
+      <div class="row">
+        <h5>{{advertisement.title}}</h5>
+      </div>
+      <div class="row">
+        <p>{{advertisement.description}}</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 m-0 p-0">
+          <p class="m-0"><i class="fas text-muted fa-mobile-alt"></i> : {{advertisement.contact_number}}</p>
+        </div>
+        <div class="col-md-6 m-0 p-0">
+          <p class="m-0"><i class="fas text-muted fa-map-marker-alt"></i> : {{advertisement.location}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 p-3">
+      <div class="row"><h5 style="word-break:break-word">Rs. {{advertisement.price}}</h5></div>
+      <div class="row"><p>(Not/Negotiable)</p></div>
+    </div>
+  </div>
+</div>

@@ -16,6 +16,15 @@ import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './components/header/header.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
+import { CollapseModule, ModalModule } from 'ngx-bootstrap';
+import { ItemAdComponent } from './components/advertisements/item-ad/item-ad.component';
+
+import { NgFlashMessagesModule } from 'ng-flash-messages';
+import { CategoryItemsComponent } from './components/home/category-items/category-items.component';
+import { MainComponent } from './components/home/main/main.component';
+import { AllItemsComponent } from './components/home/category-items/all-items/all-items.component';
+import { SubcategoryItemsComponent } from './components/home/category-items/subcategory-items/subcategory-items.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +33,12 @@ import { ProfileComponent } from './components/profile/profile.component';
     LoginComponent,
     SignupComponent,
     HeaderComponent,
-    ProfileComponent
+    ProfileComponent,
+    ItemAdComponent,
+    CategoryItemsComponent,
+    MainComponent,
+    AllItemsComponent,
+    SubcategoryItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +47,10 @@ import { ProfileComponent } from './components/profile/profile.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot({timeOut: 3000,closeButton: true,positionClass: 'toast-bottom-right'}) // ToastrModule added
+    ToastrModule.forRoot({timeOut: 3000,closeButton: true,positionClass: 'toast-bottom-right'}), // ToastrModule added
+    CollapseModule.forRoot(),
+    ModalModule.forRoot(),
+    NgFlashMessagesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

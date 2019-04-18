@@ -10,7 +10,15 @@
 }
 
 .input-icon{
-    float: left;
     position: absolute;
-    z-index: 2;
+    top: 30%;
+    left: 6.2%;
+    z-index: 9999;
+    padding: 0;
+}
+
+.input-icon-field{
+    position: relative;
+    padding-left: 2em !important;
+    border-radius: .25em;
 }

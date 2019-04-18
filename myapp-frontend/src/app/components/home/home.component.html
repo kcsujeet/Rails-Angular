@@ -7,8 +7,13 @@
             </div>
             <div class="card-body category-list">
               <ul>
-                <li *ngFor="let category of categories"><a><i class="fas fa-home"></i>{{category.name}}</a></li>
-               
+                <li routerLinkActive="link-active" [attr.aria-expanded]="!isCollapsed" aria-controls="subcategorylist" *ngFor="let category of categories" ><a data-toggle="collapse" [routerLink]="['/category',category.id]"  (click)="category.isCollapsed = !category.isCollapsed"  ><i class="{{category.icon_class}}" ></i>{{category.name}}</a>
+                <ul [collapse]="!category.isCollapsed" class="collapse-list" id="subcategorylist">
+                  <li *ngFor="let subcategory of category.subcategory">
+                    <a [routerLink]="['/category',category.id,subcategory.id]" routerLinkActive="link-active">{{subcategory.name}}</a>
+                </li>
+                </ul>
+                </li>
               </ul>
             </div>
           </div>
@@ -18,12 +23,10 @@
             <div class="card-header">
               Featured
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+        </div>
+        <ul class="mt-3 ad-list">
+          <router-outlet></router-outlet>
+        </ul>
     </div>
     <div class="col-md-3">
         <div class="card">

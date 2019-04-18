@@ -7,15 +7,12 @@ html, body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6,p{
-    font-family: 'Ubuntu', sans-serif;
     font-size: 85%;
-}
-
-p{
-    font-size: 70%;
+    color: #6c757d !important;
 }
 
 .form-control:focus {
@@ -28,4 +25,22 @@ p{
 .navbar{
     padding: 0 .5rem;
     background: #5b9bd1;
+}
+
+.input-icon{
+    position: absolute;
+    top: 30%;
+    left: 6.2%;
+    z-index: 9999;
+    padding: 0;
+}
+
+.input-icon-field{
+    position: relative;
+    padding-left: 2em !important;
+    border-radius: .25em !important;
+}
+
+.drop-shadow{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
