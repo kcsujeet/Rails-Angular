@@ -1,34 +1,50 @@
-<div class="row h-100 align-items-center justify-content-center">
-  <div class="col-md-4">
-      <ng-flash-message></ng-flash-message>
-    <div class="card">
-      <div class="card-body">
-        <form [formGroup]="loginForm">
-          <div class="form-group row">
-            <div class="input-group col-sm-12">
-              <i class="fa fa-envelope input-icon text-muted"></i>
-              <input required type="text" placeholder="Email" formControlName="email" class="form-control input-icon-field" id="staticEmail" />
-            </div>
-          </div>
-          <div class="form-group row">
-            <div class="input-group col-sm-12">
-                  <i class="fa fa-lock input-icon text-muted"></i>
-              <input type="password" placeholder="Password" class="form-control input-icon-field" formControlName="password" />
-            </div>
-          </div>
-          <div class="form-group row justify-content-center">
-            <div class="col-md-6 justify-content-center text-center">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-              <span>Remember Me</span>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <button type="submit" class="btn btn-success col-md-3" (click)="login()">
-              Login
-            </button>
-          </div>
-        </form>
+<div class="row align-items-center h-100 justify-content-center">
+  <div class="container" id="container" [ngClass]="{'right-panel-active': rightPanelActive }">
+      <div class="form-container sign-up-container">
+          <form >
+              <h1>Create Account</h1>
+              <div class="social-container">
+                  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                  <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your email for registration</span>
+              <input class="form-control" type="text" placeholder="Name" />
+              <input class="form-control" type="email" placeholder="Email" />
+              <input class="form-control" type="password" placeholder="Password" />
+              <button>Sign Up</button>
+          </form>
       </div>
-    </div>
+      <div class="form-container sign-in-container">
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <h1>Sign in</h1>
+              <div class="social-container">
+                  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                  <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your account</span>
+              <input class="form-control" type="email" formControlName="email" placeholder="Email" />
+              <input class="form-control" type="password" formControlName="password" placeholder="Password" />
+              <a href="#">Forgot your password?</a>
+              <button type="submit" >Sign In</button>
+          </form>
+      </div>
+      <div class="overlay-container">
+          <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                  <h1>Welcome !</h1>
+                  <p>
+                      To keep connected with us please login with your account details
+                  </p>
+                  <button (click)="deactivateRightPanel()" class="ghost" id="signIn">Sign In</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                  <h1>Hello, Friend !</h1>
+                  <p>Enter your details and start journey with us</p>
+                  <button (click)="activateRightPanel()" class="ghost" id="signUp">Sign Up</button>
+              </div>
+          </div>
+      </div>
   </div>
 </div>

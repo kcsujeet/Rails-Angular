@@ -20,7 +20,7 @@
       }
 
       a:hover {
-        color: #5b9bd1;
+        color: #1a73b7c2;
       }
 
       i {
@@ -46,7 +46,7 @@
           }
       
           a:hover {
-            color: #5b9bd1;
+            color: #1a73b7c2;
           }
       
           i {
@@ -63,13 +63,13 @@
 
     li.active {
       border-bottom: none;
-      color: #5b9bd1;
+      color: #1a73b7c2;
       background-color: #f6f9fb;
-      border-left: 2px solid #5b9bd1;
+      border-left: 2px solid #1a73b7c2;
       margin-left: -2px;
 
       a {
-        color: #5b9bd1;
+        color: #1a73b7c2;
       }
     }
 
@@ -86,8 +86,13 @@
 
 .link-active{
   border-bottom: none;
-  color: #5b9bd1;
+  color: #338fcb;
   background-color: #f6f9fb;
-  border-left: 2px solid #5b9bd1;
+  border-left: 2px solid #338fcb;
   margin-left: -2px;
+  cursor: pointer;
+}
+
+.active-link-color{
+  color: #1a73b7c2 !important;
 }

@@ -1,0 +1,49 @@
+
+///col-md-5////////////////////////////////////////////
+ul {
+  list-style-type: none;
+}
+
+
+.center-card {
+  border-radius: 8px;
+  padding-bottom: 1.5em;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.bottom-border {
+  border-bottom: #ac32e4 1px solid;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.card-header {
+  padding: 0;
+}
+
+.btn {
+  background: #338fcb;
+  color: white;
+}
+
+.btn:hover {
+  background: #3d77a7;
+}
+
+.close-button {
+  padding: .5em .5em 0.5em 0;
+  border-radius: 50%;
+  i {
+    color: lightslategray;
+  }
+  cursor: pointer;
+}
+
+.close-button:hover{
+  i{
+    color: rgb(86, 100, 114);
+  }
+}

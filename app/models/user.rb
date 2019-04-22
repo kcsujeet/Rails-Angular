@@ -4,4 +4,5 @@ class User < ApplicationRecord
   validates :password,length: { minimum: 6 },if: -> { new_record? || !password.nil? }, presence: true
   has_many :todo, dependent: :destroy
   has_many :advertisements, dependent: :destroy
+  has_one :profile
 end

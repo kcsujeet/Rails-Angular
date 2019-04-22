@@ -11,6 +11,8 @@ import {Router} from '@angular/router'
 })
 export class LoginComponent implements OnInit {
 
+  rightPanelActive = false;
+
   loginForm = this._fb.group({
     email: ['', Validators.compose([Validators.required])],
     password: ['']
@@ -22,6 +24,14 @@ export class LoginComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
+  }
+
+  activateRightPanel(){
+    this.rightPanelActive = true
+  }
+
+  deactivateRightPanel(){
+    this.rightPanelActive = false
   }
 
   login(){

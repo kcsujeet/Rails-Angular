@@ -7,10 +7,10 @@
             </div>
             <div class="card-body category-list">
               <ul>
-                <li routerLinkActive="link-active" [attr.aria-expanded]="!isCollapsed" aria-controls="subcategorylist" *ngFor="let category of categories" ><a data-toggle="collapse" [routerLink]="['/category',category.id]"  (click)="category.isCollapsed = !category.isCollapsed"  ><i class="{{category.icon_class}}" ></i>{{category.name}}</a>
+                <li routerLinkActive="link-active" [attr.aria-expanded]="!isCollapsed" aria-controls="subcategorylist" *ngFor="let category of categories" ><a data-toggle="collapse" [routerLink]="['/category',category.id]" routerLinkActive="active-link-color"  (click)="category.isCollapsed = !category.isCollapsed"  ><i class="{{category.icon_class}}" ></i>{{category.name}}</a>
                 <ul [collapse]="!category.isCollapsed" class="collapse-list" id="subcategorylist">
                   <li *ngFor="let subcategory of category.subcategory">
-                    <a [routerLink]="['/category',category.id,subcategory.id]" routerLinkActive="link-active">{{subcategory.name}}</a>
+                    <a [routerLink]="['/category',category.id,subcategory.id]" routerLinkActive="active-link-color">{{subcategory.name}}</a>
                 </li>
                 </ul>
                 </li>

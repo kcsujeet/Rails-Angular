@@ -8,6 +8,9 @@ html, body{
     padding: 0;
     overflow-x: hidden;
     font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -43,4 +46,28 @@ h1,h2,h3,h4,h5,h6,p{
 
 .drop-shadow{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+a{
+    cursor: pointer;
+}
+
+button, .btn{
+    transition: transform 80ms ease-in;
+}
+button:active {
+    transform: scale(0.95);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+//css for component tags
+app-root{
+    height: 100%;
+}
+
+app-login{
+    flex-grow: 1;
 }

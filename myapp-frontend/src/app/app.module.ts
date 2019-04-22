@@ -16,7 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './components/header/header.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
-import { CollapseModule, ModalModule } from 'ngx-bootstrap';
+import { CollapseModule, ModalModule, BsDropdownModule } from 'ngx-bootstrap';
 import { ItemAdComponent } from './components/advertisements/item-ad/item-ad.component';
 
 import { NgFlashMessagesModule } from 'ng-flash-messages';
@@ -24,6 +24,8 @@ import { CategoryItemsComponent } from './components/home/category-items/categor
 import { MainComponent } from './components/home/main/main.component';
 import { AllItemsComponent } from './components/home/category-items/all-items/all-items.component';
 import { SubcategoryItemsComponent } from './components/home/category-items/subcategory-items/subcategory-items.component';
+import { ProfileRootComponent } from './components/profile/profile-root/profile-root.component';
+import { ProfileEditComponent } from './components/profile/profile-edit/profile-edit.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { SubcategoryItemsComponent } from './components/home/category-items/subc
     CategoryItemsComponent,
     MainComponent,
     AllItemsComponent,
-    SubcategoryItemsComponent
+    SubcategoryItemsComponent,
+    ProfileRootComponent,
+    ProfileEditComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,8 @@ import { SubcategoryItemsComponent } from './components/home/category-items/subc
     ToastrModule.forRoot({timeOut: 3000,closeButton: true,positionClass: 'toast-bottom-right'}), // ToastrModule added
     CollapseModule.forRoot(),
     ModalModule.forRoot(),
-    NgFlashMessagesModule.forRoot()
+    NgFlashMessagesModule.forRoot(),
+    BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
